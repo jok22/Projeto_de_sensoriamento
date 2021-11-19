@@ -46,7 +46,7 @@ class _TestState extends State<Test> {
           return Column(
             children: <Widget>[
               Text(
-             'VELOCIDADE: ' + snapshot.data!,
+             'VELOCIDADE: ' + snapshot.data! + 'm/s',
              style: TextStyle(color: Colors.grey)
              ,),]);
        } else if (!snapshot.hasData){
