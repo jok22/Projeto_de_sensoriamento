@@ -10,7 +10,8 @@ void main() {
   runApp(FlutterBlueApp());
 }
 
-class FlutterBlueApp extends StatelessWidget {
+// Retorna um widget sempre que o bluetooth estiver desligado, caso contrário chamará a classe FindDevicesScreen()
+class FlutterBlueApp extends StatelessWidget {  
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -29,11 +30,13 @@ class FlutterBlueApp extends StatelessWidget {
   }
 }
 
+// Cria um Stateless Widget da classe/widget BluetoothOffScreen
 class BluetoothOffScreen extends StatelessWidget {
   const BluetoothOffScreen({Key? key, this.state}) : super(key: key);
 
   final BluetoothState? state;
 
+  // Retorna um icone na tela caso o bluetooth estiver de fato desligado 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
